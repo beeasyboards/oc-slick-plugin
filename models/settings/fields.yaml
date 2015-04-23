@@ -1,0 +1,50 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    arrows:
+        label: Show prev/next arrows
+        type: switch
+        default: true
+
+    dots:
+        label: Show dot indicators
+        type: switch
+        default: false
+
+    pauseOnHover:
+        label: Pause on hover
+        type: switch
+        default: true
+
+    cssEase:
+        label: CSS animation easing
+        type: dropdown
+        options:
+            linear: Linear
+            ease: Ease
+            ease-in: Ease-in
+            ease-out: Ease-out
+            ease-in-out: Ease-in-out
+        default: ease
+        span: left
+
+    animationSpeed:
+        label: Animation speed
+        comment: In milliseconds
+        default: 300
+        span: left
+
+    autoplaySpeed:
+        label: Autoplay speed
+        comment: In milliseconds (leave blank to disable autoplay)
+        default: 3000
+        span: left
+
+    touchThreshold:
+        label: Touch threshold
+        comment: To advance slides, the user must swipe a length of (1/threshold) * the width of the slider
+        default: 5
+        span: left

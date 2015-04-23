@@ -1,0 +1,47 @@
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="popup">&times;</button>
+    <h4 class="modal-title">Reorder slides</h4>
+</div>
+
+<div class="modal-body form-container">
+    <?php if ($slides && count($slides)): ?>
+        <form>
+            <ol data-control="sortable">
+                <?php foreach ($slides as $slide): ?>
+                    <li>
+                        <input type="hidden" name="bedard_slick_slide[]" value="<?= $slide->id ?>"/>
+                        <?php
+                        if ($slide->type == 'image') $icon = 'icon-picture-o';
+                        elseif ($slide->type == 'youtube') $icon = 'icon-youtube-play';
+                        else $icon = false;
+
+                        if ($icon) echo '<i class="column-icon '.$icon.'"></i>';
+                        echo $slide->name;
+                        ?>
+                    </li>
+                <?php endforeach ?>
+            </ol>
+        <form>
+    <?php else: ?>
+        <p class="no-data">There are no active slides to reorder.</p>
+    <?php endif ?>
+</div>
+
+<div class="modal-footer">
+
+    <div class="loading-indicator">
+        <span></span><div>Saving...</div>
+    </div>
+
+    <?php if (count($slides)): ?>
+        <button type="button"
+            class="btn btn-primary"
+            data-control="apply-btn">
+            <?= e(trans('backend::lang.form.apply')) ?>
+        </button>
+    <?php endif ?>
+
+    <button type="button" class="btn btn-default" data-dismiss="popup">
+        <?= e(trans('backend::lang.form.cancel')) ?>
+    </button>
+</div>

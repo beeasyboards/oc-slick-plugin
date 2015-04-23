@@ -1,0 +1,17 @@
+<div class="slick-slider">
+    {% for slide in __SELF__.slides %}
+        <div>
+            {% if slide.isImage %}
+                {% partial __SELF__ ~ '::image' slide=slide %}
+            {% elseif slide.isYoutube %}
+                {% partial __SELF__ ~ '::youtube' slide=slide %}
+            {% endif %}
+            </div>
+    {% endfor %}
+</div>
+
+<script type="application/javascript">
+$(function() {
+    $('.slick-slider').slick({{ __SELF__.settings|json_encode|raw }});
+})
+</script>

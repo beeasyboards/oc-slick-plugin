@@ -1,0 +1,8 @@
+<?php
+if ($record->type == 'image') $icon = 'icon-picture-o';
+elseif ($record->type == 'youtube') $icon = 'icon-youtube-play';
+else $icon = false;
+
+if ($icon) echo '<i class="column-icon '.$icon.'"></i>';
+
+echo $value;

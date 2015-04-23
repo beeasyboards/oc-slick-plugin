@@ -1,0 +1,9 @@
+<div class="slider-content">
+    {% if slide.href %}
+        <a href="{{ slide.href }}"{% if slide.is_new_window %} target="_blank"{% endif %}>
+    {% endif %}
+        <img src="{{ slide.image.getPath() }}" alt="{{ slide.image.title }}"/>
+    {% if slide.href %}
+        </a>
+    {% endif %}
+</div>

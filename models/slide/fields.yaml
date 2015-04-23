@@ -1,0 +1,51 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+
+    type:
+        label: Type
+        type: dropdown
+        options:
+            image: Image
+            youtube: YouTube video
+        default: image
+        span: left
+
+    name:
+        label: Name
+        span: left
+
+    href:
+        dependsOn: type
+        label: Link
+        span: left
+
+    image:
+        dependsOn: type
+        label: Image
+        type: fileupload
+        mode: image
+        imageWidth: 200
+        imageHeight: 200
+        fileTypes: png,gif,jpg,jpeg
+        span: left
+
+    youtube:
+        dependsOn: type
+        label: YouTube ID
+        comment: 11 character string at the end of a YouTube url.
+        span: left
+
+    is_new_window:
+        dependsOn: type
+        label: Open links in a new window
+        type: switch
+        default: false
+
+    is_active:
+        label: Status
+        type: switch
+        default: true
