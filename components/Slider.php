@@ -35,6 +35,7 @@ class Slider extends ComponentBase
 
         // Load slider settings
         $this->settings = [
+            'adaptiveHeight'    => (bool) Settings::get('adaptiveHeight', true),
             'animationSpeed'    => intval(Settings::get('animationSpeed', 300)),
             'arrows'            => (bool) Settings::get('arrows', true),
             'autoplay'          => (bool) Settings::get('autoplay', true),

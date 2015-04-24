@@ -4,6 +4,11 @@
 
 fields:
 
+    adaptiveHeight:
+        label: Adaptive height
+        type: switch
+        default: true
+
     arrows:
         label: Show prev/next arrows
         type: switch
