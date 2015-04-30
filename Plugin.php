@@ -37,7 +37,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('bedard/slick/slides'),
                 'icon'        => 'icon-picture-o',
                 'permissions' => ['Bedard.Slick.*'],
-                'order'       => 300,
+                'order'       => 600,
 
                 'sideMenu' => [
                     'slides' => [
