@@ -1,4 +1,4 @@
-<?php namespace Bedard\Slick\Updates;
+<?php namespace BeEasy\Slider\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ class CreateSlidesTable extends Migration
 
     public function up()
     {
-        Schema::create('bedard_slick_slides', function($table)
+        Schema::create('beeasy_slider_slides', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -25,7 +25,7 @@ class CreateSlidesTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('bedard_slick_slides');
+        Schema::dropIfExists('beeasy_slider_slides');
     }
 
 }

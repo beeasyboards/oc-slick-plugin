@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/bedard/slick/models/slide/columns.yaml
+list: $/beeasy/slider/models/slide/columns.yaml
 
 # Model Class name
-modelClass: Bedard\Slick\Models\Slide
+modelClass: BeEasy\Slider\Models\Slide
 
 # List Title
 title: Manage Slides
 
 # Link URL for each record
-recordUrl: bedard/slick/slides/update/:id
+recordUrl: beeasy/slider/slides/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

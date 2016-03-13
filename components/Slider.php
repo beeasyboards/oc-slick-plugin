@@ -1,7 +1,7 @@
-<?php namespace Bedard\Slick\Components;
+<?php namespace BeEasy\Slider\Components;
 
-use Bedard\Slick\Models\Settings;
-use Bedard\Slick\Models\Slide;
+use BeEasy\Slider\Models\Settings;
+use BeEasy\Slider\Models\Slide;
 use Cms\Classes\ComponentBase;
 
 class Slider extends ComponentBase
@@ -48,8 +48,8 @@ class Slider extends ComponentBase
         $this->slides = Slide::isActive()->inOrder()->with('image')->get();
 
         // Inject slider assets
-        $this->addCss('/plugins/bedard/slick/assets/css/slick.css');
-        $this->addJs('/plugins/bedard/slick/assets/js/slick.min.js');
+        $this->addCss('/plugins/beeasy/slider/assets/css/slick.css');
+        $this->addJs('/plugins/beeasy/slider/assets/js/slick.min.js');
 
         // Load slider settings
         $this->settings = [

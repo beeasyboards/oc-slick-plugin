@@ -1,8 +1,8 @@
-<?php namespace Bedard\Slick\Controllers;
+<?php namespace BeEasy\Slider\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Bedard\Slick\Models\Slide;
+use BeEasy\Slider\Models\Slide;
 use Flash;
 
 /**
@@ -21,14 +21,14 @@ class Slides extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Bedard.Slick', 'slick', 'slides');
+        BackendMenu::setContext('BeEasy.Slider', 'slick', 'slides');
     }
 
     public function index($userId = null)
     {
-        $this->addCss('/plugins/bedard/slick/assets/css/list.css');
-        $this->addJs('/plugins/bedard/slick/assets/js/jquery.sortable.js');
-        $this->addJs('/plugins/bedard/slick/assets/js/list.js');
+        $this->addCss('/plugins/beeasy/slider/assets/css/list.css');
+        $this->addJs('/plugins/beeasy/slider/assets/js/jquery.sortable.js');
+        $this->addJs('/plugins/beeasy/slider/assets/js/list.js');
         $this->prepareVars();
     }
 

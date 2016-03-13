@@ -1,4 +1,4 @@
-<?php namespace Bedard\Slick\Models;
+<?php namespace BeEasy\Slider\Models;
 
 use Model;
 
@@ -17,7 +17,7 @@ class Slide extends Model
     /**
      * @var string      The database table used by the model.
      */
-    public $table = 'bedard_slick_slides';
+    public $table = 'beeasy_slider_slides';
 
     /**
      * @var array       Fillable fields

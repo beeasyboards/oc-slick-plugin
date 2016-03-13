@@ -1,4 +1,4 @@
-<?php namespace Bedard\Slick;
+<?php namespace BeEasy\Slider;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -34,23 +34,23 @@ class Plugin extends PluginBase
         return [
             'slick' => [
                 'label'       => 'Slider',
-                'url'         => Backend::url('bedard/slick/slides'),
+                'url'         => Backend::url('beeasy/slider/slides'),
                 'icon'        => 'icon-picture-o',
-                'permissions' => ['Bedard.Slick.*'],
+                'permissions' => ['BeEasy.Slider.*'],
                 'order'       => 600,
 
                 'sideMenu' => [
                     'slides' => [
                         'label'         => 'Slides',
                         'icon'          => 'icon-picture-o',
-                        'url'           => Backend::url('bedard/slick/slides'),
-                        'permissions'   => ['Bedard.Slick.access_slides'],
+                        'url'           => Backend::url('beeasy/slider/slides'),
+                        'permissions'   => ['BeEasy.Slider.access_slides'],
                     ],
                     'settings' => [
                         'label'         => 'Settings',
                         'icon'          => 'icon-cog',
-                        'url'           => Backend::url('system/settings/update/bedard/slick/general'),
-                        'permissions'   => ['Bedard.Slick.access_settings'],
+                        'url'           => Backend::url('system/settings/update/beeasy/slider/general'),
+                        'permissions'   => ['BeEasy.Slider.access_settings'],
                     ],
                 ],
             ],
@@ -69,7 +69,7 @@ class Plugin extends PluginBase
                 'label'         => 'Slick',
                 'icon'          => 'icon-picture-o',
                 'description'   => 'A touch-friendly image and video slider.',
-                'class'         => 'Bedard\Slick\Models\Settings',
+                'class'         => 'BeEasy\Slider\Models\Settings',
                 'order'         => 100,
                 'keywords'      => 'slider'
             ],
@@ -84,7 +84,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Bedard\Slick\Components\Slider' => 'slickSlider',
+            'BeEasy\Slider\Components\Slider' => 'slickSlider',
         ];
     }
 

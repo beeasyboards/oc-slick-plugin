@@ -1,4 +1,4 @@
-<?php namespace Bedard\Slick\Models;
+<?php namespace BeEasy\Slider\Models;
 
 use Model;
 

@@ -15,17 +15,17 @@ columns:
     slide:
         label: Slide
         type: partial
-        path: ~/plugins/bedard/slick/models/slide/_slide.htm
+        path: ~/plugins/beeasy/slider/models/slide/_slide.htm
         select: >
             (
                 CASE
-                    WHEN (`bedard_slick_slides`.`youtube` IS NULL) THEN (
+                    WHEN (`beeasy_slider_slides`.`youtube` IS NULL) THEN (
                         SELECT `file_name`
                         FROM `system_files`
                         WHERE `system_files`.`attachment_type` = 'Bedard\\Slick\\Models\\Slide'
-                        AND `system_files`.`attachment_id` = `bedard_slick_slides`.`id`
+                        AND `system_files`.`attachment_id` = `beeasy_slider_slides`.`id`
                     )
-                    ELSE `bedard_slick_slides`.`youtube`
+                    ELSE `beeasy_slider_slides`.`youtube`
                 END
             )
         searchable: true
@@ -37,11 +37,11 @@ columns:
     type:
         label: Type
         type: partial
-        path: ~/plugins/bedard/slick/models/slide/_type.htm
+        path: ~/plugins/beeasy/slider/models/slide/_type.htm
         searchable: false
 
     is_active:
         label: Status
         type: partial
-        path: ~/plugins/bedard/slick/models/slide/_status.htm
+        path: ~/plugins/beeasy/slider/models/slide/_status.htm
         searchable: false

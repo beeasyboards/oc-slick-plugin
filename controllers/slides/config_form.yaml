@@ -6,25 +6,25 @@
 name: Slide
 
 # Model Form Field configuration
-form: $/bedard/slick/models/slide/fields.yaml
+form: $/beeasy/slider/models/slide/fields.yaml
 
 # Model Class name
-modelClass: Bedard\Slick\Models\Slide
+modelClass: BeEasy\Slider\Models\Slide
 
 # Default redirect location
-defaultRedirect: bedard/slick/slides
+defaultRedirect: beeasy/slider/slides
 
 # Create page
 create:
     title: Create Slide
-    redirect: bedard/slick/slides/update/:id
-    redirectClose: bedard/slick/slides
+    redirect: beeasy/slider/slides/update/:id
+    redirectClose: beeasy/slider/slides
 
 # Update page
 update:
     title: Edit Slide
-    redirect: bedard/slick/slides
-    redirectClose: bedard/slick/slides
+    redirect: beeasy/slider/slides
+    redirectClose: beeasy/slider/slides
 
 # Preview page
 preview:
