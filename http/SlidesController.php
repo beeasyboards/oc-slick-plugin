@@ -1,5 +1,6 @@
 <?php namespace BeEasy\Slider\Http;
 
+use BeEasy\Slider\Models\Slide;
 use Illuminate\Routing\Controller;
 
 class SlidesController extends Controller
@@ -12,6 +13,6 @@ class SlidesController extends Controller
      */
     public function index()
     {
-        return 'What\'s up from the SlidesController';
+        return Slide::isActive()->inOrder()->with('image')->get();
     }
 }

@@ -12,6 +12,10 @@ columns:
         label: Name
         searchable: true
 
+    created_at:
+        label: Date created
+        type: date
+
     slide:
         label: Slide
         type: partial
